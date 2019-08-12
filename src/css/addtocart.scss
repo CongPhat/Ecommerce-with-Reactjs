@@ -1,0 +1,50 @@
+.addtocart {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	overflow-y: hidden;
+	box-shadow: 0 0 10px black;
+	border-radius: 20px;
+	background-color: white;
+	z-index: 2000;
+	width: 90%;
+	height: 50px;
+	bottom: 50%;
+	left: 5%;
+	h1 {
+		font-size: 15px;
+		width: 80%;
+		color: black;
+		span {
+			color: #82ae46;
+		}
+	}
+	.addtocart--close {
+		width: 20px;
+		height: 30px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: 0;
+		.line {
+			position: absolute;
+			width: 20px;
+			height: 5px;
+			background-color: black;
+		}
+		.line:first-child {
+			transform: rotate(45deg);
+		}
+		.line:last-child {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.addtocart{
+		width: 50%;
+		left: 25%;
+	}
+}

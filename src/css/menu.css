@@ -1,0 +1,85 @@
+.menu {
+  padding: 20px 0;
+}
+.menu .menu__logo {
+  display: inline-block;
+  margin: 0;
+}
+.menu .menu__logo h1 {
+  font-size: 18px;
+  font-weight: 900;
+  color: #82ae46;
+}
+.menu .nav__hambuger {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  float: right;
+  cursor: pointer;
+}
+.menu .nav__hambuger .nav__line {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+.menu .menu__nav {
+  animation: Toggle 1s linear 1;
+  display: block;
+}
+.menu .menu__nav ul {
+  padding: 0;
+}
+.menu .menu__nav ul li {
+  list-style: none;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.menu .menu__nav ul li a {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu .menu__nav ul li a {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu .menu__logo {
+    display: inline-block;
+  }
+  .menu .menu__logo h1 {
+    font-size: 20px;
+  }
+  .menu .nav__hambuger {
+    display: none;
+  }
+  .menu .menu__nav {
+    display: inline-block;
+    float: right;
+  }
+  .menu .menu__nav ul {
+    padding: 0;
+    margin: 0;
+  }
+  .menu .menu__nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  .menu .menu__nav ul li a {
+    font-size: 14px;
+  }
+}
+@keyframes Toggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

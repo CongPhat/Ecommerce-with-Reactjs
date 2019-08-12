@@ -1,0 +1,83 @@
+.carousel {
+	height: 50vh;
+	background: {
+		image: url('./../images/bg_2.jpg');
+		position: center;
+		size: cover;
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	h1 {
+		font-family: "Amatic SC", cursive;
+		font-size: 40px;
+		color: white;
+	}
+
+	h2 {
+		font-size: 15px;
+		font-weight: 300;
+		color: white;
+	}
+
+	.carousel__btn {
+		outline: 0;
+		font-size: 20px;
+		padding: 10px;
+		color: white;
+		border: 0;
+		border-radius: 30px;
+		background-color: #82ae46;
+		transition: 1s;
+
+			&:hover {
+			border: 1px solid #82ae46;
+			color: #82ae46;
+			background-color: transparent;
+		}
+	}
+}
+
+@mixin fontSizeCarousel($sizeH1, $sizeH2) {		
+	.carousel {
+		h1 {font-size: $sizeH1;}
+		h2 {font-size: $sizeH2;}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	@include fontSizeCarousel(60px, 20px);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	@include fontSizeCarousel(80px, 25px);
+}
+
+@media screen and (min-width: 1200px){
+	.carousel {
+		height: 90vh;
+	}
+	@include fontSizeCarousel(90px, 20px);
+}
+
+.effect-left {
+	animation: fromTheLeft 1.5s 1;
+}
+
+.effect-right {
+	animation: fromTheRight 1.5s 1;
+}
+
+@keyframes fromTheLeft {
+	0%{transform: translateX(-30%);opacity: 0.5}
+	80%{transform: translateX(5%);opacity: 0.6}
+	100%{transform: translateX(0);opacity: 1}
+}
+
+@keyframes fromTheRight {
+	0%{transform: translateX(30%);opacity: 0.5}
+	80%{transform: translateX(-3%);opacity: 0.9}
+	100%{transform: translateX(0);opacity: 1}
+}

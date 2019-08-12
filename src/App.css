@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.section {
+  padding-top: 5em;
+  position: relative;
+}
+
+h1,h2,h3,p {
+  margin: 0;
+  color: gray;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+h3 {
+  letter-spacing: 1px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 15px;
+}
